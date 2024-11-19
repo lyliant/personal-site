@@ -1,0 +1,219 @@
+/* Colors */
+:root {
+  --peach: #F5D4C3;
+  --coral: #E09789;
+  --mint: #E9F1EF;
+  --aqua: #C8DBD7;
+  --cream: #F6EFE7;
+  --dark-teal: #3C5556;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for Three.js Background */
+#three-js-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Place it behind all other content */
+  overflow: hidden;
+  background: transparent;
+}
+
+/* General Reset and Styling */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--aqua);
+  line-height: 1.6;
+  text-align: center;
+  background: transparent; /* Transparent to show the Three.js background */
+}
+
+body.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Navigation Bar */
+nav {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--peach);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  box-shadow: 0px 4px 8px var(--shadow);
+  z-index: 1; /* Ensure it appears above the Three.js background */
+}
+
+nav a {
+  color: var(--aqua);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--coral);
+}
+
+/* Header Section */
+header {
+  width: 100%;
+  color: white;
+  position: relative;
+  z-index: 1; /* Keep above the Three.js background */
+  padding: 5rem 1rem;
+}
+
+header .content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: white;
+  background: var(--coral);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c87768;
+}
+
+/* Main Content */
+main {
+  max-width: 1000px;
+  padding: 2rem;
+  z-index: 1; /* Keep above the Three.js background */
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h2 {
+  font-size: 2rem;
+  color: var(--aqua);
+  margin-bottom: 1rem;
+}
+
+.resume-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--aqua);
+  margin-bottom: 1rem;
+}
+
+.resume-section a {
+  color: var(--coral);
+  text-decoration: none;
+}
+
+.resume-section a:hover {
+  text-decoration: underline;
+}
+
+/* Projects Section */
+.project-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-item {
+  background-color: var(--mint);
+  border: 2px solid var(--aqua);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0px 4px 12px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px var(--shadow);
+}
+
+.project-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-item h3 {
+  font-size: 1.2rem;
+  color: var(--dark-teal);
+  margin-bottom: 0.5rem;
+}
+
+.project-item p {
+  font-size: 0.9rem;
+  color: var(--dark-teal);
+}
+
+.project-item .btn {
+  color: var(--coral);
+  border: 1px solid var(--coral);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-item .btn:hover {
+  background-color: var(--coral);
+  color: var(--cream);
+}
+
+/* Footer */
+footer {
+  background-color: var(--peach);
+  padding: 1rem;
+  text-align: center;
+  color: var(--dark-teal);
+  box-shadow: 0px -4px 8px var(--shadow);
+  z-index: 1; /* Keep above the Three.js background */
+}
+
+footer a {
+  color: var(--coral);
+}
+
+footer ul.socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer ul.socials li {
+  display: inline-block;
+}
+
+footer ul.socials li a img {
+  width: 24px;
+  height: 24px;
+}
